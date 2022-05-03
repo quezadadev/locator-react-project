@@ -1,4 +1,6 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect }  from 'react';
+import Maps from './components/Maps';
+import Search from './components/Search';
 import axios from 'axios';
 
 function App() {
@@ -16,8 +18,9 @@ function App() {
   }, []);
  
   return (
-    <div className="App">
-     React Locator
+    <div>
+      <Search/>
+     <Maps/>
      { console.log(`DATA: ${restaurants}`) }
      { restaurants.map( ({ business_name }) => {
        console.log(business_name)
