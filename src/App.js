@@ -1,15 +1,10 @@
-
-import Maps from './components/Maps';
+import React from 'react';
 
 function App() {
   return (
-   <div>
-      <Maps/>
-      
-   </div>
-    
-   
-     
+    <div className="App">
+     Hotel Locator
+    </div>
   );
 }
 
