@@ -1,9 +1,12 @@
 import React from 'react';
+import Maps from './components/Maps';
+import Search from './components/Search';
 
 function App() {
   return (
-    <div className="App">
-     Hotel Locator
+    <div>
+      <Search/>
+     <Maps/>
     </div>
   );
 }
