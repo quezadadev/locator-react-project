@@ -20,12 +20,8 @@ function App() {
   return (
     <div>
       <Search/>
-     <Maps/>
-     { console.log(`DATA: ${restaurants}`) }
-     { restaurants.map( ({ business_name }) => {
-       console.log(business_name)
-     })
-     }
+     <Maps restaurants={restaurants}/>
+    
     </div>
   );
 }
