@@ -35,11 +35,12 @@ function App() {
         handleSearch={handleSearch} 
         refreshSearch={refreshSearch}
         />
-     
+    <div className="map--container">
      <Maps 
       restaurants ={restaurants} 
       newSearch={newSearch}  
       />
+    </div>
     </div>
   );
 }
