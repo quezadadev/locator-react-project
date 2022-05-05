@@ -15,14 +15,14 @@ function App() {
 
   };
   
-
   useEffect(() => {
     getRestaurants();
   }, []);
+
   const handleSearch = (e)=> {
-  
     setNewSearch(e.target.value);
   };
+
   const refreshSearch = ()=> {
     setNewSearch('');
   };
@@ -30,37 +30,17 @@ function App() {
  
   return (
     <div>
-      <Search  newSearch={newSearch} handleSearch={handleSearch} refreshSearch={refreshSearch}/>
-      <div className='map-con'>
-     <Maps restaurants ={restaurants}  />
-     {/* {console.log(restaurants)} */}
-     { restaurants
-     .filter((value)=>{
-        if(newSearch ===''){
-          return value;
-        }else{
-          
-            if(value.business_postal_code?.includes(newSearch)||
-            value.business_name?.toLowerCase().includes(newSearch.toLowerCase())){
-           
-              return value;
-              }
-            
-          }
-      })
-      .map( (value) => {
-      //  {console.log(value.business_name)}
-      return (
-        <div >
-          <p>{value.business_name}</p>
-          <p>{value.business_postal_code}</p>
-        </div>
-      
-      )
-     })
-  
-     }
-     </div>
+    <Search
+        newSearch={newSearch} 
+        handleSearch={handleSearch} 
+        refreshSearch={refreshSearch}
+        />
+    <div className="map--container">
+     <Maps 
+      restaurants ={restaurants} 
+      newSearch={newSearch}  
+      />
+    </div>
     </div>
   );
 }

@@ -3,12 +3,8 @@ body {
   font-family:sans-serif;
 }
 
-.loc {
-  width: 100vw;
-  height: 100vh;
-  position: relative;
-}
-.map-con {
-  display: flex;
-  width: 100vw;
+.map--container{
+  max-width: 900px;
+  margin: 0 auto;
+  border: solid 5px black;
 }
