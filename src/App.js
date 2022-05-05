@@ -1,4 +1,5 @@
 import React, { useState, useEffect }  from 'react';
+import Header from './components/Header';
 import Maps from './components/Maps';
 import Search from './components/Search';
 import axios from 'axios';
@@ -30,6 +31,7 @@ function App() {
  
   return (
     <div>
+    <Header className="header" /> 
     <Search
         newSearch={newSearch} 
         handleSearch={handleSearch} 
