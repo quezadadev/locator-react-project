@@ -1,5 +1,5 @@
 import React from 'react'
-import { GrRefresh } from 'react-icons/gr';
+import { GrRefresh,  } from 'react-icons/gr';
 
 const Search = ({newSearch, handleSearch,refreshSearch}) => {
    
@@ -10,7 +10,7 @@ const Search = ({newSearch, handleSearch,refreshSearch}) => {
       <input
         type="text"
         id="search"
-        placeholder="search hotel"
+        placeholder="Search Restaurants"
         value={newSearch}
         onChange={handleSearch}
       
