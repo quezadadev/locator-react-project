@@ -44,7 +44,7 @@ const Maps = ({ restaurants, newSearch }) => {
                   }
                 
               }
-
+             
           })
             
           } 
