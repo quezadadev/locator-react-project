@@ -1,5 +1,7 @@
 import React, { useState, useEffect }  from 'react';
+import Header from './components/Header';
 import Maps from './components/Maps';
+import Card from './components/Card';
 import Search from './components/Search';
 import axios from 'axios';
 
@@ -30,6 +32,7 @@ function App() {
  
   return (
     <div>
+    <Header className="header" /> 
     <Search
         newSearch={newSearch} 
         handleSearch={handleSearch} 
@@ -40,6 +43,24 @@ function App() {
       restaurants ={restaurants} 
       newSearch={newSearch}  
       />
+      { restaurants.map( ({
+          business_name,
+          business_address,
+          business_city,
+          business_state,
+          business_postal_code,
+          
+        }) => { 
+         
+          return <Card 
+            name={business_name}
+            address={business_address}
+            city={business_city} 
+            state={business_state}
+            zipCode={business_postal_code}
+            /> 
+        })
+      }
     </div>
     </div>
   );
