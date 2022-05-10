@@ -9,6 +9,7 @@ function App() {
 
   const [restaurants, setRestaurants] = useState([]);
   const [newSearch, setNewSearch] = useState('')
+ 
 
   const getRestaurants = async () => {
     const url = 'https://data.sfgov.org/resource/pyih-qa8i.json'
@@ -29,7 +30,6 @@ function App() {
     setNewSearch('');
   };
 
- 
   return (
     <div>
     <Header className="header" /> 
