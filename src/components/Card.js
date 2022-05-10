@@ -1,21 +1,52 @@
 import React from 'react';
 
-const Card = ({ name,  address, city, state, zipCode }) => {
+const Card = ({ restaurants, newSearch }) => {
   return (
-    <div className='grid'>
-    <article>
-    {/* <img src="/pix/samples/23m.jpg" alt="Sample photo"> */}
+  <div className='grid'>
+          { restaurants.map( ({
+          business_name,
+          business_address,
+          business_city,
+          business_state,
+          business_postal_code,
+          
+        }) => { 
+  
+  if (newSearch ==='') {    
+   return <article>
     <div class="text">
-      <h3> { name } </h3>
-      <p> { address } </p>
-      <p> { city } </p>
-      <p> { state } </p>
-      <p> { zipCode } </p>
-      <button>{ city } { state }</button>
+      <h3> { business_name } </h3>
+      <p> { business_address } </p>
+      <p> {  business_city } </p>
+      <p> {  business_state } </p>
+      <p> {  business_postal_code } </p>
+      <button>{ business_city } {  business_state }</button>
     </div>
-    </article>
+  </article>
+  }
+
+  else{
+
+    if(business_postal_code?.includes(newSearch)||
+    business_name?.toLowerCase().includes(newSearch.toLowerCase())){ 
+      return <article>
+    <div class="text">
+      <h3> { business_name } </h3>
+      <p> { business_address } </p>
+      <p> {  business_city } </p>
+      <p> {  business_state } </p>
+      <p> {  business_postal_code } </p>
+      <button>{ business_city } {  business_state }</button>
     </div>
-  )
+  </article>
+    } 
+  
+  }
+
+  }) 
 }
+  </div>
+)}
+
 
 export default Card;

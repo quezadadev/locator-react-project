@@ -3,15 +3,21 @@ body {
   font-family:sans-serif;
 }
 
-.map--container{
-  max-width: 900px;
-  margin: 0 auto;
-  border: solid 5px black;
-}
-
 .header--container{
   display: flex;
   justify-content: center;
+}
+
+.map--container {
+  display: grid;
+  grid-template-columns: 900px 400px;
+  justify-content: space-around;
+  border: solid 5px black;
+  margin-top: 3rem;
+}
+
+.map--layout {
+  margin-top: 3rem;
 }
 
 .grid { 
