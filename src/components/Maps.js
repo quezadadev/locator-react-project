@@ -4,6 +4,7 @@ import { Map, Marker, Overlay,  ZoomControl } from "pigeon-maps"
 const Maps = ({ restaurants, newSearch }) => {
  
   return (
+  <div className='map--layout'>
   <Map
     height={500} defaultCenter={[37.733795, -122.446747]} defaultZoom={11}>
       <ZoomControl />
@@ -49,6 +50,7 @@ const Maps = ({ restaurants, newSearch }) => {
             
           } 
         </Map>
+        </div>
       )
 }
 
