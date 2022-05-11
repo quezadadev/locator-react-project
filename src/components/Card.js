@@ -6,6 +6,7 @@ const Card = ({ restaurants, newSearch }) => {
   return (
   <div className='grid'>
           { restaurants.map( ({
+          business_id,
           business_name,
           business_address,
           business_city,
@@ -15,7 +16,7 @@ const Card = ({ restaurants, newSearch }) => {
         }) => { 
   
   if (newSearch ==='') {    
-   return <Link to="/resturants">
+   return <Link to={`/resturants/${business_id}`}>
    <article>
     <div class="text">
       <h3> { business_name } </h3>
