@@ -1,6 +1,7 @@
 import React from 'react'
 
 const PopUpCard = (props) => {
+
   return (
     <div className="popup-box">
     <div className="box">

@@ -16,7 +16,15 @@ const Card = ({ restaurants, newSearch }) => {
         }) => { 
   
   if (newSearch ==='') {    
-   return <Link to={`/resturants/${business_id}`}>
+   return <Link to={`/resturants/${business_id}`} 
+              state={ {
+                name: business_name,
+                address: business_address,
+                city: business_city,
+                state: business_state,
+                zipCode: business_postal_code
+              }}
+          >
    <article>
     <div class="text">
       <h3> { business_name } </h3>
