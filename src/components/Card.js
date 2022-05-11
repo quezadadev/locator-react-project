@@ -1,6 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Card = ({ restaurants, newSearch }) => {
+ 
   return (
   <div className='grid'>
           { restaurants.map( ({
@@ -13,7 +15,8 @@ const Card = ({ restaurants, newSearch }) => {
         }) => { 
   
   if (newSearch ==='') {    
-   return <article>
+   return <Link to="/resturants">
+   <article>
     <div class="text">
       <h3> { business_name } </h3>
       <p> { business_address } </p>
@@ -23,6 +26,7 @@ const Card = ({ restaurants, newSearch }) => {
       <button>{ business_city } {  business_state }</button>
     </div>
   </article>
+  </Link>
   }
 
   else{
