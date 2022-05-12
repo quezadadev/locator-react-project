@@ -1,20 +1,35 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const Restaurant = () => {
   
   const navigate = useNavigate();
-  function handleClick() {
-    navigate('/')
+  const location = useLocation();
+  const { name, address, city, state, zipCode } =  location.state;
+  
+
+  const handleClick = () => {
+    navigate('/');
   }
-  const { id } = useParams();
-  alert(id);
+
+  console.log(location);
   return (
     
     <div>
       <button onClick={handleClick}> Back</button>
       Restaurant
+      <div className='grid'>
+      <article>
+    <div class="text">
+      <h3> { name } </h3>
+      <p> { address } </p>
+      <p> {  city } </p>
+      <p> {  state } </p>
+      <p> {  zipCode } </p>
+      <button>{ city } {  state }</button>
+    </div>
+  </article>
+      </div>
     </div>
   )
 }
