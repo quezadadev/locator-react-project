@@ -42,16 +42,26 @@ const Card = ({ restaurants, newSearch }) => {
 
     if(business_postal_code?.includes(newSearch)||
     business_name?.toLowerCase().includes(newSearch.toLowerCase())){ 
-      return <article>
-    <div class="text">
-      <h3> { business_name } </h3>
-      <p> { business_address } </p>
-      <p> {  business_city } </p>
-      <p> {  business_state } </p>
-      <p> {  business_postal_code } </p>
-      <button>{ business_city } {  business_state }</button>
-    </div>
-  </article>
+      return <Link to={`/resturants/${business_id}`} 
+      state={ {
+        name: business_name,
+        address: business_address,
+        city: business_city,
+        state: business_state,
+        zipCode: business_postal_code
+      }}
+  >
+<article>
+<div class="text">
+<h3> { business_name } </h3>
+<p> { business_address } </p>
+<p> {  business_city } </p>
+<p> {  business_state } </p>
+<p> {  business_postal_code } </p>
+<button>{ business_city } {  business_state }</button>
+</div>
+</article>
+</Link>
     } 
   
   }
