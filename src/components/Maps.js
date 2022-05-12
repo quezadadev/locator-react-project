@@ -45,26 +45,23 @@ const Maps = ({ restaurants, newSearch }) => {
                         src='/images/icon.png' width={15} height={15} alt='resturant-icon' />
                    
                       { business_id === restaurantId && 
-                      
-                      <Link to={`/resturants/${business_id}`} 
-                      state={ {
-                        name: business_name,
-                        address: business_address,
-                        city: business_city,
-                        state: business_state,
-                        zipCode: business_postal_code
-                      }}
-                  >       
+                       
                       <PopUpCard
                         content={<>
-        <b>Design your Popup</b>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <button>Test button</button>
+        <b>{ business_name}</b>
+        <p>{ business_address}</p>
+        <p>{ business_city}, {business_postal_code}</p>
       </>
          }
       
                         handleClose={togglePopup}
-                      /> </Link>
+                        business_id={business_id}
+                        business_name={business_name}
+                        business_address={business_address}
+                        business_city={business_city}
+                        business_state={business_state}
+                        business_postal_code={business_postal_code}
+                      /> 
                       
                       }
                     </Overlay>
@@ -76,39 +73,36 @@ const Maps = ({ restaurants, newSearch }) => {
                 business_name?.toLowerCase().includes(newSearch.toLowerCase())){
                
                   return <Overlay 
-                    anchor={[
-                      parseFloat(business_latitude), 
-                      parseFloat(business_longitude)]} 
-                      >
-            <img  onClick={ () => {
-                        togglePopup(business_id)}
-                        } 
-                        src='/images/icon.png' width={15} height={15} alt='resturant-icon' />
-                   
-                      { business_id === restaurantId && 
-                      
-                      <Link to={`/resturants/${business_id}`} 
-                      state={ {
-                        name: business_name,
-                        address: business_address,
-                        city: business_city,
-                        state: business_state,
-                        zipCode: business_postal_code
-                      }}
-                  >       
-                      <PopUpCard
-                        content={<>
-        <b>Design your Popup</b>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <button onClick={ () => {
-                        togglePopup(business_id)}
-                        }>Test button</button>
-      </>
-         }
-      
-                        handleClose={togglePopup}
-                      /> </Link>}
-                    </Overlay>
+                  anchor={[
+                    parseFloat(business_latitude), 
+                    parseFloat(business_longitude)]} 
+                    >
+          <img  onClick={ () => {
+                      togglePopup(business_id)}
+                      } 
+                      src='/images/icon.png' width={15} height={15} alt='resturant-icon' />
+                 
+                    { business_id === restaurantId && 
+                     
+                    <PopUpCard
+                      content={<>
+      <b>{ business_name}</b>
+      <p>{ business_address}</p>
+      <p>{ business_city}, {business_postal_code}</p>
+    </>
+       }
+    
+                      handleClose={togglePopup}
+                      business_id={business_id}
+                      business_name={business_name}
+                      business_address={business_address}
+                      business_city={business_city}
+                      business_state={business_state}
+                      business_postal_code={business_postal_code}
+                    /> 
+                    
+                    }
+                  </Overlay>
                   }
                 
               }
