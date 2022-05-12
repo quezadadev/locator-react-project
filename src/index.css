@@ -13,11 +13,11 @@ body {
   grid-template-columns: 900px 400px;
   justify-content: space-around;
   border: solid 5px black;
-  margin-top: 3rem;
+  margin-top: .5rem;
 }
 
 .map--layout {
-  margin-top: 3rem;
+  /* margin-top: 2rem; */
 }
 
 .grid { 
@@ -26,8 +26,11 @@ body {
   grid-gap: 20px;
   align-items: stretch;
   max-width: 500px;
+  width:80%;
+  height:80vh;
   margin: 0 auto;
   margin-top: 3rem;
+  overflow-y: scroll;
   }
 .grid > article {
   border: 1px solid #ccc;
@@ -85,4 +88,10 @@ body {
   text-align: center;
   border: 1px solid #999;
   font-size: 20px;
+}
+input {
+  border: 3px solid #32e17c;
+  height: 25px;
+  width: 300px;
+  border-radius: 50px;
 }

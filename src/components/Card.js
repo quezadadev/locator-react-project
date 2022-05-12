@@ -12,7 +12,7 @@ const Card = ({ restaurants, newSearch }) => {
           business_city,
           business_state,
           business_postal_code,
-          
+          risk_category,
         }) => { 
   
   if (newSearch ==='') {    

@@ -28,6 +28,7 @@ const Maps = ({ restaurants, newSearch }) => {
             business_city,
             business_state,
             business_postal_code,
+            
 
           }) => {
             

@@ -1,10 +1,10 @@
 import React from 'react'
 import { MdFoodBank } from "react-icons/md";
 
-const Header = () => {
+const Header = ({refreshSearch}) => {
   return (
     <div className='header--container'>
-    <MdFoodBank size={'5rem'} />
+    <MdFoodBank size={'5rem'} onClick={refreshSearch}/>
     </div>
   )
 }

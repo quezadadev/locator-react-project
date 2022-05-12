@@ -6,7 +6,7 @@ const Search = ({newSearch, handleSearch,refreshSearch}) => {
   return (
     <div>
     <label htmlFor="search">
-    <strong>Search Restaurants: </strong> <button className="button" onClick={refreshSearch} ><GrRefresh /></button></label> <br></br>
+    <strong>Search Restaurants: </strong> </label> 
       <input
         type="text"
         id="search"
@@ -16,6 +16,7 @@ const Search = ({newSearch, handleSearch,refreshSearch}) => {
       
     
       />
+      {/* <button className="button" onClick={refreshSearch} ><GrRefresh size={'1.25rem'}/></button> */}
   </div>
   )
 }
