@@ -3,6 +3,7 @@ import Maps from '../components/Maps';
 import Card from '../components/Card';
 import Search from '../components/Search';
 import axios from 'axios';
+import Header from '../components/Header';
 
 const Home = () => {
     const [restaurants, setRestaurants] = useState([]);
@@ -30,10 +31,10 @@ const Home = () => {
   
     return (
       <div>
+        
       <Search
           newSearch={newSearch} 
           handleSearch={handleSearch} 
-          refreshSearch={refreshSearch}
           />
       <div className="map--container">
        <Maps 
