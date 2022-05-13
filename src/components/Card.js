@@ -1,10 +1,43 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import styled from 'styled-components'
+
+const CardContainer = styled.div`
+display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+  align-items: stretch;
+  max-width: 500px;
+  width:80%;
+  height:80vh;
+  margin: 0 auto;
+  margin-top: 3rem;
+  overflow-y: scroll;
+  & > article {
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+  }
+  & > article img {
+    max-width: 100%;
+  }
+  .text {
+    padding: 0 20px 20px;
+  }
+  .text > button {
+    background: gray;
+    border: 0;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    } 
+  
+`
 
 const Card = ({ restaurants, newSearch }) => {
  
   return (
-  <div className='grid'>
+  // <div className='grid'>
+  <CardContainer>
           { restaurants.map( ({
           business_id,
           business_name,
@@ -12,7 +45,7 @@ const Card = ({ restaurants, newSearch }) => {
           business_city,
           business_state,
           business_postal_code,
-          risk_category,
+  
         }) => { 
   
   if (newSearch ==='') {    
@@ -68,7 +101,7 @@ const Card = ({ restaurants, newSearch }) => {
 
   }) 
 }
-  </div>
+     {/* </div> */}</CardContainer>
 )}
 
 

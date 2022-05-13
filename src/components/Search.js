@@ -1,5 +1,14 @@
 import React from 'react'
 import { GrRefresh,  } from 'react-icons/gr';
+import styled from 'styled-components'
+
+const InputTag = styled.input`
+border: 3px solid #32e17c;
+  height: 25px;
+  width: 300px;
+  border-radius: 50px;
+ 
+`
 
 const Search = ({newSearch, handleSearch,refreshSearch}) => {
    
@@ -7,7 +16,8 @@ const Search = ({newSearch, handleSearch,refreshSearch}) => {
     <div>
     <label htmlFor="search">
     <strong>Search Restaurants: </strong> </label> 
-      <input
+      <InputTag
+    
         type="text"
         id="search"
         placeholder="Search Restaurants"

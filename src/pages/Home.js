@@ -3,6 +3,15 @@ import Maps from '../components/Maps';
 import Card from '../components/Card';
 import Search from '../components/Search';
 import axios from 'axios';
+import styled from 'styled-components'
+
+const MapContainer = styled.div`
+display: grid;
+  grid-template-columns: 900px 400px;
+  justify-content: space-around;
+  border: solid 5px black;
+  margin-top: .5rem;
+`
 
 const Home = () => {
     const [restaurants, setRestaurants] = useState([]);
@@ -34,17 +43,18 @@ const Home = () => {
           newSearch={newSearch} 
           handleSearch={handleSearch} 
           />
-      <div className="map--container">
-       <Maps 
+      
+        <MapContainer><Maps 
         restaurants ={restaurants} 
         newSearch={newSearch}  
         />
        <Card
         restaurants ={restaurants} 
         newSearch={newSearch} 
-       />
+       /></MapContainer>
+       
       </div>
-      </div>
+    
     );
 }
 
