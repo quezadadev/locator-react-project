@@ -3,10 +3,19 @@ import { Routes,Link, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Home from './pages/Home';
 import Restaurant from './pages/Restaurant';
+import { createGlobalStyle } from 'styled-components';
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    margin: 0;
+    font-family:sans-serif;
+  }
+`;
 
 const App = () => {
   return (
-    <div>
+    <>
+      <GlobalStyle />
       <Link to="/">
         <Header/>
       </Link>
@@ -17,7 +26,8 @@ const App = () => {
       <Route path="/resturants" element={<Restaurant />} />
       <Route path="/resturants/:id" element={<Restaurant />} />
     </Routes>
-    </div>
+   
+  </>
   );
 };
 
