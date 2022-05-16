@@ -12,24 +12,41 @@ display: grid;
   height:80vh;
   margin: 0 auto;
   margin-top: 3rem;
-  // overflow-y: scroll;
   & > article {
     border: 1px solid #ccc;
     box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
   }
-  & > article img {
-    max-width: 100%;
+  & > article > img {
+    margin-top: 7rem;
+    max-width: 100px;
+    display: block;
+    margin: 100px auto 0 auto;
   }
   .text {
     padding: 0 20px 20px;
+    color: red;
+    text-align: center;
+    margin-top: 5rem;
   }
+
   .text > button {
-    background: gray;
+    background: red;
     border: 0;
     color: white;
     padding: 10px;
-    width: 100%;
-    } 
+    width: 75%;
+    }
+
+    a:link { text-decoration: none; }
+
+
+    a:visited { text-decoration: none; }
+
+
+    a:hover { text-decoration: none; }
+
+
+  a:active { text-decoration: none; } 
   
 `
 
@@ -39,7 +56,7 @@ const StyledButton = styled.button`
   padding: .5rem;
   border: none;
   width: 90px;
-  margin-left: 10rem;
+  margin-left: 5rem;
   &:hover {
     webkit-filter: blur(.5px);
     filter: blur(.5px);
@@ -66,13 +83,15 @@ const Restaurant = () => {
     
         <GridCon> 
           <article>
+            {/* <div className="img"> */}
+            <img src="/images/spoon-and-fork.png"
+            alt='resturant-icon' />
+            {/* </div> */}
        <div class="text">
       <h3> { name } </h3>
       <p> { address } </p>
-      <p> {  city } </p>
-      <p> {  state } </p>
-      <p> {  zipCode } </p>
-      <button>{ city } {  state }</button>
+      <p> {  city }, {  state } {  zipCode } </p>
+      <button>{ city }, {  state }</button>
     </div>
   </article>
   </GridCon>
