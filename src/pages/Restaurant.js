@@ -33,6 +33,21 @@ display: grid;
   
 `
 
+const StyledButton = styled.button`
+  background-color: red;
+  color: white;
+  padding: .5rem;
+  border: none;
+  width: 90px;
+  margin-left: 10rem;
+  &:hover {
+    webkit-filter: blur(.5px);
+    filter: blur(.5px);
+    cursor: pointer;
+    border: .5px solid red;
+  }
+`
+
 const Restaurant = () => {
   
   const navigate = useNavigate();
@@ -44,13 +59,11 @@ const Restaurant = () => {
     navigate('/');
   }
 
-  console.log(location);
   return (
     
     <div>
-      <button onClick={handleClick}> Back</button>
-      Restaurant
-     {/* <div className='grid'> */}
+      <StyledButton onClick={handleClick}> Back</StyledButton>
+    
         <GridCon> 
           <article>
        <div class="text">
@@ -63,7 +76,7 @@ const Restaurant = () => {
     </div>
   </article>
   </GridCon>
-  {/* </div> */}
+ 
      
       </div>
     
