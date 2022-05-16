@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components'
+import LoadingSpinner from './LoadingSpinner';
 
 const CardContainer = styled.div`
 display: grid;
@@ -56,7 +57,8 @@ const Card = ({ restaurants, newSearch }) => {
   return (
 
   <CardContainer>
-          { restaurants.map( ({
+    { restaurants.length === 0 ? <LoadingSpinner /> : 
+           restaurants.map( ({
           business_id,
           business_name,
           business_address,
@@ -115,7 +117,7 @@ const Card = ({ restaurants, newSearch }) => {
 
   }) 
 }
-</CardContainer>
+  </CardContainer>
 )}
 
 

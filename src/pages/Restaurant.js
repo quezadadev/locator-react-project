@@ -83,10 +83,8 @@ const Restaurant = () => {
     
         <GridCon> 
           <article>
-            {/* <div className="img"> */}
             <img src="/images/spoon-and-fork.png"
             alt='resturant-icon' />
-            {/* </div> */}
        <div class="text">
       <h3> { name } </h3>
       <p> { address } </p>
