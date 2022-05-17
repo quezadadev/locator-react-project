@@ -11,7 +11,6 @@ justify-content:center;
  width: 250px;
  border-radius: 50px;
   padding-left:15px;
-//  margin-left: 10px;
    margin-bottom: 5px;
  }
  
@@ -20,12 +19,10 @@ justify-content:center;
 const Search = ({newSearch, handleSearch,refreshSearch}) => {
    
   return (
-    // <div className='label-search'>
+  
      <LabelSearch>
     <label htmlFor="search">
     <strong className='label' >Search Restaurants: </strong> </label> 
-      
-      {/* <InputTag  */}
       <input type="text"
     id="search"
     placeholder="Search Restaurants"
@@ -33,10 +30,7 @@ const Search = ({newSearch, handleSearch,refreshSearch}) => {
     onChange={handleSearch}
   />
       <img className='refresh'  onClick={refreshSearch} src='/images/refreesh.jpeg ' width={18} height={18} alt=''/><br/> 
-    
-    
-      {/* <button className="button" onClick={refreshSearch} ><GrRefresh size={'1.25rem'}/></button> */}
-   {/* </div>  */}
+
    </LabelSearch>
 
   )

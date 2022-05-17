@@ -6,25 +6,19 @@ const  PopUpCardWrap = styled.div`
 position: fixed;
   background: #00000050;
   width: 100%;
-  // height: 100vh;
   top: 0;
   left: 0;
 .box{
   position: relative;
   width: 150px;
-  /* width: 100%; */
   margin: 0 auto;
   height: 150px;
-  /* height: auto; */
   max-height: 25vh;
   margin-top: calc(100vh - 85vh - 20px);
-  background: #fff;
-  //  background: rgb(41, 5, 142); 
+  background: #fff; 
   border-radius: 4px;
   padding: 20px;
    border: 1px solid #999; 
-  // overflow: auto;
-
 }
 .close-icon {
   content: 'x';
