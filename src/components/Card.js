@@ -47,11 +47,6 @@ display: grid;
   
 `
 
-const FlexCenter = styled.div`
-  display: flex;
-  justify-content: center;
-`
-
 const Card = ({ restaurants, newSearch }) => {
  
   return (
