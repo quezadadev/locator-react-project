@@ -1,71 +1,61 @@
-# Getting Started with Create React App
+# React Locator Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Technologies: React.js, Styled Components
 
-## Available Scripts
+Data: https://datasf.org/opendata/
+Map: https://www.npmjs.com/package/pigeon-maps
 
-In the project directory, you can run:
+#### Demo:
 
-### `npm start`
+## Team: Ermias and Jesus
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![react_component_tree](/assets/react_component_tree.jpg)
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Requirements:
 
-### `npm run build`
+- [ ] Your app should use `styled-components` for styling rather than scss/regular css.
+- [ ] Your app should use `react-router-dom` for conditional rendering of your different "page" elements.
+- [ ] Your app should use a React-specific mapping package and load search results onto the map as pushpins. Look into npm packages like [React Leaflet](https://react-leaflet.js.org/), [React Google Maps](https://www.npmjs.com/package/@react-google-maps/api), [Pigeon Maps](https://www.npmjs.com/package/pigeon-maps), [Here Maps React](https://www.npmjs.com/package/here-maps-react-v2), etc. Note that not all mapping APIs are free, so read the fine print!
+- [ ] Your app should have a search bar that allows a user to specify a new location to search in. After user search, the map should recenter and show results in the new location.
+- [ ] Pull data from your external API using `axios`, `fetch`, or a similar tool. Make sure that your app runs a search for results in the default location upon render, displays search results, and displays pushpins for those results on the map!
+- [ ] Your app should have a separate location details "page" that the user can navigate to by clicking on a search result (and maybe even by clicking on a map pushpin). This location details component should **NOT** receive its data via props and should instead use `useEffect()` to pull location details from the API after initial render. See the [Blog App Demo](https://github.com/scullenBitwise/react-apprenticeship/tree/main/react/11_react-router/3_blog-app) for an example of how to accomplish this.
+- [ ] Hide any API keys using a `.env` file. Remember to add the `.env` file to your `.gitignore` so that it is not uploaded to GitHub!
+- [ ] Your app should have multiple components. Use props to pass data from parent components into child components to allow customization of the child components. (Sometimes it's easiest to start with one or two big components, and to break code out into smaller, more specific components after the core functionality is in place.)
+- [ ] Make your code as DRY (**D**on't **R**epeat **Y**ourself) as possible!
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Use Cases for App
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**User should be able to see**
 
-### `npm run eject`
+1. Icon
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. Input field
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Map
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Icon
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+4. Card
 
-## Learn More
+- Text
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**User should be able to do**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Enter characters into input field:
 
-### Code Splitting
+- Filter Icons
+- Filter Cards
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2. Zoom in and out of Map
 
-### Analyzing the Bundle Size
+3. Click on icons displayed on Map
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- PopUp Card
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# hotel-locator-react-project
+4. Click on Card
