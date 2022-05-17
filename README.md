@@ -2,7 +2,7 @@
 
 Technologies: React.js, Styled Components
 
-Data: https://datasf.org/opendata/
+Data: https://datasf.org/opendata
 Map: https://www.npmjs.com/package/pigeon-maps
 
 #### Demo:
@@ -11,7 +11,7 @@ Map: https://www.npmjs.com/package/pigeon-maps
 
 ---
 
-![react_component_tree](/assets/react_component_tree.jpg)
+![react-component-tree](/assets/react-component-tree.jpg)
 
 ---
 
