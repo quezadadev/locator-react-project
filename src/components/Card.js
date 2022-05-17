@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components'
+import LoadingSpinner from './LoadingSpinner';
 
 const CardContainer = styled.div`
 display: grid;
@@ -22,23 +23,37 @@ display: grid;
   }
   .text {
     padding: 0 20px 20px;
+    color: red;
   }
+ 
   .text > button {
-    background: gray;
+    background: red;
     border: 0;
     color: white;
     padding: 10px;
     width: 100%;
-    } 
+    }
+
+    a:link { text-decoration: none; }
+
+
+    a:visited { text-decoration: none; }
+
+
+    a:hover { text-decoration: none; }
+
+
+  a:active { text-decoration: none; } 
   
 `
 
 const Card = ({ restaurants, newSearch }) => {
  
   return (
-  // <div className='grid'>
+
   <CardContainer>
-          { restaurants.map( ({
+    { restaurants.length === 0 ? <LoadingSpinner /> : 
+           restaurants.map( ({
           business_id,
           business_name,
           business_address,
@@ -62,9 +77,7 @@ const Card = ({ restaurants, newSearch }) => {
     <div class="text">
       <h3> { business_name } </h3>
       <p> { business_address } </p>
-      <p> {  business_city } </p>
-      <p> {  business_state } </p>
-      <p> {  business_postal_code } </p>
+      <p> {  business_city }, {  business_state } {  business_postal_code } </p>
       <button>{ business_city } {  business_state }</button>
     </div>
   </article>
@@ -84,16 +97,14 @@ const Card = ({ restaurants, newSearch }) => {
         zipCode: business_postal_code
       }}
   >
-<article>
-<div class="text">
-<h3> { business_name } </h3>
-<p> { business_address } </p>
-<p> {  business_city } </p>
-<p> {  business_state } </p>
-<p> {  business_postal_code } </p>
-<button>{ business_city } {  business_state }</button>
-</div>
-</article>
+    <article>
+    <div class="text">
+      <h3> { business_name } </h3>
+      <p> { business_address } </p>
+      <p> {  business_city }, {  business_state } {  business_postal_code } </p>
+      <button>{ business_city } {  business_state }</button>
+    </div>
+    </article>
 </Link>
     } 
   
@@ -101,7 +112,7 @@ const Card = ({ restaurants, newSearch }) => {
 
   }) 
 }
-     {/* </div> */}</CardContainer>
+  </CardContainer>
 )}
 
 
