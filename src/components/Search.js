@@ -5,6 +5,8 @@ import styled from 'styled-components'
 const LabelSearch = styled.div`
 display: flex;
 justify-content:center;
+margin-top: 2rem;
+margin-bottom: 2rem;
  & > input {
   border: 3px solid black;
    height: 20px;
@@ -22,14 +24,15 @@ const Search = ({newSearch, handleSearch,refreshSearch}) => {
   
      <LabelSearch>
     <label htmlFor="search">
-    <strong className='label' >Search Restaurants: </strong> </label> 
+    <strong className='label' >Search Restaurants </strong> 
+    </label> 
       <input type="text"
     id="search"
     placeholder="Search Restaurants"
     value={newSearch}
     onChange={handleSearch}
   />
-      <img className='refresh'  onClick={refreshSearch} src='/images/refreesh.jpeg ' width={18} height={18} alt=''/><br/> 
+      {/* <img className='refresh'  onClick={refreshSearch} src='/images/refreesh.jpeg ' width={18} height={18} alt=''/><br/>  */}
 
    </LabelSearch>
 
