@@ -7,10 +7,11 @@ import styled from 'styled-components'
 
 const MapContainer = styled.div`
 display: grid;
-  grid-template-columns: 900px 400px;
-  justify-content: space-around;
-  border: solid 5px black;
-  margin-top: .5rem;
+  grid-template-columns: 900px 350px;
+   justify-content:space-around;
+   margin-top: .5rem;
+  margin-left: 5rem;
+ 
 `
 
 const Home = () => {
@@ -41,10 +42,12 @@ const Home = () => {
       <div>
       <Search
           newSearch={newSearch} 
-          handleSearch={handleSearch} 
+          handleSearch={handleSearch}
+          refreshSearch={refreshSearch} 
           />
       
-        <MapContainer><Maps 
+        <MapContainer>
+          <Maps 
         restaurants ={restaurants} 
         newSearch={newSearch}  
         />

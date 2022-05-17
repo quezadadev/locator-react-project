@@ -14,7 +14,7 @@ const Maps = ({restaurants,newSearch }) => {
   return (
   <div className='map--layout'>
   <Map
-    height={500} defaultCenter={[37.733795, -122.446747]} defaultZoom={11}>
+    height={500} defaultCenter={[37.733795, -122.446747]} defaultZoom={12}>
       <ZoomControl />
       <Marker width={50} anchor={[37.780133, -122.445864]} />
     
@@ -39,10 +39,10 @@ const Maps = ({restaurants,newSearch }) => {
                       parseFloat(business_latitude), 
                       parseFloat(business_longitude)]} 
                       >
-            <img  onClick={ () => {
+            <img   onClick={ () => {
                         togglePopup(business_id)}
                         } 
-                        src='/images/icon.png' width={15} height={15} alt='resturant-icon' />
+                        src='/images/restaurant1.png' width={20} height={20}   z-index={'2'} alt='resturant-icon' />
                    
                       { business_id === restaurantId && 
                        
@@ -80,7 +80,7 @@ const Maps = ({restaurants,newSearch }) => {
           <img  onClick={ () => {
                       togglePopup(business_id)}
                       } 
-                      src='/images/icon.png' width={15} height={15} alt='resturant-icon' />
+                      src='/images/restaurant1.png' width={20} height={20} z-index={'2'} alt='resturant-icon' />
                  
                     { business_id === restaurantId && 
                      
