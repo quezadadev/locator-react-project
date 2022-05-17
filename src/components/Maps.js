@@ -1,9 +1,9 @@
 import React, { useState }  from 'react';
-import { Link } from 'react-router-dom';
 import { Map, Marker, Overlay,  ZoomControl } from "pigeon-maps"
 import PopUpCard from './PopUpCard';
+import LoadingSpinner from './LoadingSpinner';
 
-const Maps = ({ restaurants, newSearch }) => {
+const Maps = ({restaurants,newSearch }) => {
 
   const [restaurantId, setRestaurantId] = useState('');
 
@@ -17,8 +17,8 @@ const Maps = ({ restaurants, newSearch }) => {
     height={500} defaultCenter={[37.733795, -122.446747]} defaultZoom={11}>
       <ZoomControl />
       <Marker width={50} anchor={[37.780133, -122.445864]} />
-        { 
-        
+    
+         { restaurants.length === 0 ? <LoadingSpinner /> :
           restaurants.map( ({
             business_id,
             business_latitude,
