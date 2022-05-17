@@ -2,32 +2,43 @@ import React from 'react'
 import { GrRefresh,  } from 'react-icons/gr';
 import styled from 'styled-components'
 
-const InputTag = styled.input`
-border: 3px solid #32e17c;
-  height: 25px;
-  width: 300px;
-  border-radius: 50px;
+const LabelSearch = styled.div`
+display: flex;
+justify-content:center;
+ & > input {
+  border: 3px solid black;
+   height: 20px;
+ width: 250px;
+ border-radius: 50px;
+  padding-left:15px;
+//  margin-left: 10px;
+   margin-bottom: 5px;
+ }
  
 `
 
 const Search = ({newSearch, handleSearch,refreshSearch}) => {
    
   return (
-    <div>
+    // <div className='label-search'>
+     <LabelSearch>
     <label htmlFor="search">
-    <strong>Search Restaurants: </strong> </label> 
-      <InputTag
-    
-        type="text"
-        id="search"
-        placeholder="Search Restaurants"
-        value={newSearch}
-        onChange={handleSearch}
+    <strong className='label' >Search Restaurants: </strong> </label> 
       
+      {/* <InputTag  */}
+      <input type="text"
+    id="search"
+    placeholder="Search Restaurants"
+    value={newSearch}
+    onChange={handleSearch}
+  />
+      <img className='refresh'  onClick={refreshSearch} src='/images/refreesh.jpeg ' width={18} height={18} alt=''/><br/> 
     
-      />
+    
       {/* <button className="button" onClick={refreshSearch} ><GrRefresh size={'1.25rem'}/></button> */}
-  </div>
+   {/* </div>  */}
+   </LabelSearch>
+
   )
 }
 

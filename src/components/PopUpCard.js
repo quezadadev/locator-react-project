@@ -11,19 +11,20 @@ position: fixed;
   left: 0;
 .box{
   position: relative;
-  width: 200px;
+  width: 150px;
   /* width: 100%; */
   margin: 0 auto;
-  height: 200px;
+  height: 150px;
   /* height: auto; */
   max-height: 25vh;
   margin-top: calc(100vh - 85vh - 20px);
   background: #fff;
-  /* background: rgb(41, 5, 142); */
+  //  background: rgb(41, 5, 142); 
   border-radius: 4px;
   padding: 20px;
-  /* border: 1px solid #999; */
-  overflow: auto;
+   border: 1px solid #999; 
+  // overflow: auto;
+
 }
 .close-icon {
   content: 'x';
@@ -39,7 +40,16 @@ position: fixed;
   text-align: center;
   border: 1px solid #999;
   font-size: 20px;
+  z-index:4;
 }
+.poup-box {
+     text-decoration: none;
+  
+      &:focus, &:hover, &:visited, &:link, &:active {
+          text-decoration: none;
+      }
+      color:black;
+    
 `;
 
 const PopUpCard = ({
@@ -63,7 +73,7 @@ const PopUpCard = ({
        onClick={handleClose}>x
     
       </span>
-      <Link to={`/resturants/${business_id}`} state={ {
+      <Link className='poup-box' to={`/resturants/${business_id}`} state={ {
                         name: business_name,
                         address: business_address,
                         city: business_city,
