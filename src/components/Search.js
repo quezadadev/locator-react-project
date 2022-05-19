@@ -1,5 +1,4 @@
 import React from 'react'
-import { GrRefresh,  } from 'react-icons/gr';
 import styled from 'styled-components'
 
 const LabelSearch = styled.div`

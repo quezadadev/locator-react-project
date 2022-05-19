@@ -109,7 +109,7 @@ const Card = ({ restaurants, newSearch }) => {
     } 
   
   }
-
+  return null;
   }) 
 }
   </CardContainer>
